@@ -1,5 +1,4 @@
 class FlatpagesController < ApplicationController
-  include Meta
   # Public: Show flatpage
   #
   # Returns text/html
