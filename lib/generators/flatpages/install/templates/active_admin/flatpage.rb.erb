@@ -1,0 +1,20 @@
+ActiveAdmin.register Flatpage do
+  permit_params :name, :text, :path
+
+  index do
+    column :name
+    column :path
+
+    actions
+  end
+
+  form do |f|
+    f.inputs do
+      f.input :name
+      f.input :path
+      f.input :text, :as => :ckeditor
+    end
+
+    f.actions
+  end
+end

@@ -1,31 +1,32 @@
 # Flatpages
 
-TODO: Write a gem description
+Simple gem for save static pages in database
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
+gem 'ckeditor'
 gem 'flatpages'
 ```
 
-And then execute:
+Install and configure ckeditor
+Then run
 
-    $ bundle
+```
+rails generate flatpages:install .
+```
 
-Or install it yourself as:
+And add to your routes.rb before root route
 
-    $ gem install flatpages
+```ruby
+mount Flatpages::Engine => '/'
+```
 
 ## Usage
 
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/flatpages/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+For make link to static page use route like this
+```
+flatpages_engine.flatpage_path('contacts')
+```

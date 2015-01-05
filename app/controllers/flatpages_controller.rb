@@ -3,6 +3,7 @@ class FlatpagesController < ApplicationController
   #
   # Returns text/html
   def show
-    @page = Page.friendly.find(params[:id])
+    @page = Flatpage.find_by_path(params[:path])
+    raise ActiveRecord::RecordNotFound unless @page.present?
   end
 end

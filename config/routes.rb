@@ -1,3 +1,3 @@
 Flatpages::Engine.routes.draw do
-  resources :flatpages, only: :show, path: ''
+  get '/:path', to: 'flatpages#show', as: 'flatpage'
 end
