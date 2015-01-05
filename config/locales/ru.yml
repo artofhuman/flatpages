@@ -1,0 +1,13 @@
+ru:
+  activerecord:
+    models:
+      flatpage:
+        one: 'Страница'
+        few: 'Страницы'
+        many: 'Страниц'
+        other: 'Страница'
+    attributes:
+      flatpage:
+        name: 'Название'
+        path: 'Путь'
+        text: 'Текст'
